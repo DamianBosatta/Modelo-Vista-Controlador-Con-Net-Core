@@ -1,0 +1,47 @@
+﻿@model UnidadesModel
+@{
+    ViewData["Title"] = "Crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Crear Auto
+    </div>
+    <div class="card-body">
+      
+        <form asp-action="Crear" asp-controller="Mantenedor" method="post">
+            <div class="mb-3">
+                <label for="text" class="form-label">Modelo</label>
+                <input asp-for=" modelo" type="text" class="form-control">
+                <span asp-validation-for="modelo" class=" text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"> Marca </label>
+                <input asp-for=" marca" type="text" class="form-control">
+                <span asp-validation-for=" marca" class=" text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Año</label>
+                <input asp-for=" año" type="text" class="form-control">
+                <span asp-validation-for="año" class=" text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Kilometros</label>
+                <input asp-for=" kilometros" type="text" class="form-control">
+                <span asp-validation-for="kilometros" class=" text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Precio</label>
+                <input asp-for=" precio" type="text" class="form-control">
+                <span asp-validation-for="precio" class=" text-danger"></span>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+       
+    </div>
+</div>
